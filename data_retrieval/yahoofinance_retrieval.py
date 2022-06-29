@@ -2,10 +2,11 @@ import requests
 import pandas as pd
 import numpy as np
 import time
+import os
+from dotenv import load_dotenv
 
-# yf_key = "A9n29cZYNj7xPDyy1TCcX1XHl7ogCWjM3yGH6YYn" #tk2asian@gmail.com
-
-yf_key = "ZYC7tMe2QD7ib5bLtLCDn1P6ws8QpPua9389FeqZ"  #tanner.kunz22@gmail.com
+load_dotenv(os.getcwd()+'/.env')
+yf_key  = os.getenv('yahoo_finance')
 
 headers = {
     "x-api-key": yf_key
